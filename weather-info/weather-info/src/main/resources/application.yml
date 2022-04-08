@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: weather-info
+    
+server:
+  port: 8082
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eurekaserver:eurekaserver@localhost:8081/eureka/
+  instance:
+    hostname: localhost
+
+service:
+  url: https://api.weatherapi.com/v1/forecast.json?key=483a04daff914ce58f991903220803&q=
